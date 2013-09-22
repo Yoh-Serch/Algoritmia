@@ -1,8 +1,11 @@
 #include<stdio.h>
-
+//Funcion para pedir datos
 float dato(char *);
+//Funcion que calcula el valor de y
 float obtener_y(float, float, float, float, float, float);
+//Funcion que calcula el valor de x
 float obtener_x(float, float, float, float);
+//Funcion que imprime resultados
 void imprimir_resultado(float, float);
 
 main()
@@ -33,9 +36,13 @@ float obtener_y(float A, float B, float C, float D, float E, float F)
 {
 	printf("Calculando y...\n");
 	float y, y1, y2, resta;
+	//Calculamos valores necesarios
 	y1 = D * C;
+	//Calculamos un posible valor de y
 	y2 = D * B;
+	//Restamos los dos valores de y
 	resta = (-y2 + E);
+	//Obtenemos el valor de y
 	y = ((F * A) - y1)/resta;
 	return y;
 }
@@ -44,6 +51,7 @@ float obtener_x(float A, float B, float C, float y)
 {
 	printf("Calculando x...\n");
 	float x;
+	//Calculamos x y regresamos valor
 	x = (C - (B * y))/A;
 	return x;
 }
