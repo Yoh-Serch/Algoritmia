@@ -18,6 +18,7 @@ main()
 	F = dato("F");
 	y = obtener_y(A, B, C, D, E, F);
 	x = obtener_x(A, B, C, y);
+	imprimir_resultado(x, y);
 }
 
 float dato(char *constante)
@@ -30,21 +31,27 @@ float dato(char *constante)
 
 float obtener_y(float A, float B, float C, float D, float E, float F)
 {
+	printf("Calculando y...\n");
 	float y, y1, y2, resta;
 	y1 = D * C;
 	y2 = D * B;
-	//printf("Valor de y1: %f \n Valor de y2: %f", y1, y2);
 	resta = (-y2 + E);
-	//printf("Valor de resta: %f", resta);
 	y = ((F * A) - y1)/resta;
-	//printf("Valor de y: %f \n",y );
 	return y;
 }
 
 float obtener_x(float A, float B, float C, float y)
 {
+	printf("Calculando x...\n");
 	float x;
 	x = (C - (B * y))/A;
 	return x;
+}
+
+void imprimir_resultado(float x, float y)
+{
+	printf("Los calculos han sido realizados...\n");
+	printf("El valor de x es: %f \n", x);
+	printf("El valor de y es: %f \n", y);
 }
 
