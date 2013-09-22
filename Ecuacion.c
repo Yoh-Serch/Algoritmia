@@ -1,8 +1,8 @@
 #include<stdio.h>
 
 float dato(char *);
-float obtener_y();
-float obtener_x();
+float obtener_y(float, float, float, float, float, float);
+float obtener_x(float, float, float, float);
 void imprimir_resultado(float, float);
 
 main()
@@ -16,6 +16,8 @@ main()
 	D = dato("D");
 	E = dato("E");
 	F = dato("F");
+	y = obtener_y(A, B, C, D, E, F);
+	x = obtener_x(A, B, C, y);
 }
 
 float dato(char *constante)
@@ -26,11 +28,20 @@ float dato(char *constante)
 	return valor;
 }
 
-float obtener_y()
+float obtener_y(float A, float B, float C, float D, float E, float F)
 {
-
+	float y, y1, y2, resta;
+	y1 = D * C;
+	y2 = D * B;
+	//printf("Valor de y1: %f \n Valor de y2: %f", y1, y2);
+	resta = (-y2 + E);
+	//printf("Valor de resta: %f", resta);
+	y = ((F * A) - y1)/resta;
+	//printf("Valor de y: %f \n",y );
+	return y;
 }
 
-float obtener_x()
-{}
+float obtener_x(float A, float B, float C, float y)
+{
+}
 
