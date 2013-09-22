@@ -43,5 +43,8 @@ float obtener_y(float A, float B, float C, float D, float E, float F)
 
 float obtener_x(float A, float B, float C, float y)
 {
+	float x;
+	x = (C - (B * y))/A;
+	return x;
 }
 
