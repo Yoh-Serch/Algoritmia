@@ -20,3 +20,17 @@ void leer_dato(int *dato, char valor)
 	scanf("%i", &*dato);
 }
 
+void encontrar_mayor(int *mayor, int *medio, int *menor)
+{
+	int apoyo;
+	if (*medio > *menor && *medio > *mayor){
+		apoyo = *mayor;
+		*mayor = *medio;
+		*medio = apoyo;
+	} else if(*menor > *mayor && *menor > *medio)){
+		apoyo = *mayor;
+		*mayor = *menor;
+		*menor = apoyo;
+	}		
+}
+
