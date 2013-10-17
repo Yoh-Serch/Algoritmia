@@ -9,8 +9,14 @@ void validar_numero(int*);
 main()
 {
 	int mayor, medio, menor;
-	leer_datos(*mayor, '1');
+	leer_datos(&mayor, '1');
+	leer_dato(&medio, '2');
+	leer_dato(&menor, '3');
 }
 
-
+void leer_dato(int *dato, char valor)
+{
+	printf("Ingrese el valor #%c", valor);
+	scanf("%i", &*dato);
+}
 
