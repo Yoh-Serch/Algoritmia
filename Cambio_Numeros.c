@@ -25,6 +25,11 @@ void leer_dato(int *dato, char valor)
 
 void validar_numero(int *numero)
 {
+	while(*numero <= 0)
+	{
+		printf("El numero tiene que ser positivo, ingresa otro::");
+		scanf("%i", &*numero);
+	}
 }
 
 void encontrar_mayor(int *mayor, int *medio, int *menor)
