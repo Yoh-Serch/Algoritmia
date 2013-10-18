@@ -12,12 +12,19 @@ main()
 	leer_datos(&mayor, '1');
 	leer_dato(&medio, '2');
 	leer_dato(&menor, '3');
+	encontrar_mayor(&mayor, &medio, &menor);
+	encontrar_medio(&medio, &menor);
+	imprimir(&mayor, &medio, &menor);
 }
 
 void leer_dato(int *dato, char valor)
 {
 	printf("Ingrese el valor #%c", valor);
 	scanf("%i", &*dato);
+}
+
+void validar_numero(int *numero)
+{
 }
 
 void encontrar_mayor(int *mayor, int *medio, int *menor)
@@ -45,5 +52,8 @@ void encontrar_medio(int *medio, int *menor)
 	}
 }
 
-
+void imprimir(int *mayor, int *medio, int *menor)
+{
+	printf("%i, %i, %i"", *medio, *menor, *mayor);
+	}
 
