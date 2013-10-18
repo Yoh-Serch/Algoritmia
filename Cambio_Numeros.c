@@ -34,3 +34,16 @@ void encontrar_mayor(int *mayor, int *medio, int *menor)
 	}		
 }
 
+void encontrar_medio(int *medio, int *menor)
+{
+	int apoyo;
+	if (*menor > *medio)
+	{
+		apoyo = *medio;
+		*medio = *menor;
+		*menor = apoyo;
+	}
+}
+
+
+
