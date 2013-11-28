@@ -4,7 +4,7 @@
 int main()
 {
 	//Cadena en donde buscaremos
-	char unaCadena[150] = "Esta aveces una aveces vez aveces un lobo que aveces tenia sed";
+	char unaCadena[150] = "Esta aveces una aveces vez aveces un lobo que aveces";
 	//Cadena a buscar
 	char palabra[50] = "aveces";
 
@@ -18,7 +18,7 @@ int main()
 		{
 			j++;
 			//Si j es menor(long-1) a la longitud de la cadena buscada y la posicion siguiente de la cadena a buscar es un espacio hemos encontrado la palabra :D
-			if(j==strlen(palabra) && unaCadena[i+1]==' ')
+			if(j==strlen(palabra) && (unaCadena[i+1]==' ' || unaCadena[i+1] == '\0'))
 			{
 				encontrada++;
 				//Una vez encontrada la palabra reiniciamos j para empear a buscar
